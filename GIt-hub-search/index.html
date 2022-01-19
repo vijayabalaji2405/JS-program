@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-quiv="X-UA-Compatible" content="IE=edge" />
+    <title>Github Profile Search</title>
+    <!--adding bootstrap and fontawesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- container - 1 -->
+      <div class="row justify-content-center pt-5 searchblock">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div id="message"></div>
+          <form id="searchForm" class="card card-sm" method="POST">
+            <div class="card-body row no-gutters align-items-center">
+              <div class="col-auto">
+                <i class="fas fa-search h4 text-body"></i>
+              </div>
+              <!-- we are splitting into three column -->
+              <!--col1-->
+              <div class="col">
+                <input
+                  class="form-control form-control-lg form-control-borderless"
+                  type="search"
+                  placeholder="Search Github Profile"
+                  name="searchInput"
+                  id="searchInput"
+                  autocomplete="off"
+                />
+              </div>
+              <!--col2-->
+              <div class="col-auto">
+                <button class="btn btn-lg btn-success" type="submit">
+                  Search
+                </button>
+              </div>
+              <!--col3-->
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- container - 2 -->
+
+      <div class="profile">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="profile-sidebar">
+              <div id="profile"></div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="profile-content">
+              <!-- cards-->
+              <ol
+                class="d-flex flex-wrap list-style-none gutter-condensed mb-4"
+                id="repos"
+              >
+                <!--filling with repos-->
+              </ol>
+            </div>
+            <footer class="text-center pt-2">
+              <a href="javascript:window.location.reload()"
+                >Search Another User</a
+              >
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
