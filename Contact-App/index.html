@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COntact</title>
+    <script type="module" defer src="src/controller.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay add_contact_modal hidden">
+      <form class="add_contact_form">
+        <div>
+          <label for="name_input">Name</label>
+          <input type="text" class="name_input" />
+        </div>
+
+        <div>
+          <label for="phone_input">Phone</label>
+          <input type="number" class="phone_input" />
+        </div>
+
+        <div>
+          <label for="email_input">Email</label>
+          <input type="email" class="email_input" />
+        </div>
+
+        <button type="submit">Save</button>
+        <button class="close">Close</button>
+      </form>
+    </div>
+    <div class="contact_container">
+      <button class="add_contact_btn">Add New Contact</button>
+
+      <div class="search_area">
+        <form class="search_form" style="width: 100%">
+          <input type="text" class="search_input" />
+          <button type="submit" class="search_btn">Search</button>
+          <button class="clear_search remove">Clear</button>
+        </form>
+      </div>
+
+      <div class="contacts_container"></div>
+    </div>
+    </div>
+  </body>
+</html>
