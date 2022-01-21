@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Manager</title>
+    <link rel="stylesheet" href="/index.e5980c4e.css">
+    <script defer="" src="/index.e37f48ea.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div style="display: flex; flex-direction: column; width: 33%">
+        <div style="display: flex; width: auto; justify-content: space-between">
+          <div class="red">Expense</div>
+          <div>
+            Sort by
+            <select name="expense_filter" id="expense_filter">
+              <option value="date">Date</option>
+              <option value="amount+">Increasing Amount</option>
+              <option value="amount-">Decreasing Amoun</option>
+            </select>
+          </div>
+        </div>
+        <div class="expene_container mycard">This is Expense</div>
+      </div>
+      <div style="display: flex; flex-direction: column; width: 33%">
+        <div style="display: flex; width: auto; justify-content: space-between">
+          <div class="green">Income</div>
+          <div>
+            Sort by
+            <select name="income_filter" id="income_filter">
+              <option value="date">Date</option>
+              <option value="amount+">Increasing Amount</option>
+              <option value="amount-">Decreasing Amoun</option>
+            </select>
+          </div>
+        </div>
+        <div class="income_container mycard">This is Income</div>
+      </div>
+
+      <div class="add_transaction_container card">
+        <div class="balance_container">
+          <h5>Your Balance is</h5>
+          <div class="balance">0.0</div>
+        </div>
+        <form class="add_transaction_form">
+          <hr style="height: 1px;
+              border-width: 0;
+              color: rgb(170, 170, 170);
+              background-color: rgb(175, 175, 175);">
+          <div style="display: flex; justify-content: center; margin-top: auto">
+            <h3>Add Transaction</h3>
+          </div>
+          <div class="form_item">
+            <label for="selectType">Type</label>
+            <select id="selectType" name="transaction_type" class="transaction_type">
+              <option value="INCOME">Income</option>
+              <option value="EXPENSE">Expense</option>
+            </select>
+          </div>
+          <div class="form_item">
+            <label for="value_input_id">Amount</label>
+            <input type="number" id="value_input_id" class="value_input" placeholder="Enter Amount">
+          </div>
+          <div style="display: flex; justify-content: center; margin-top: 1rem">
+            <button type="submit" class="submit-btn">Add Transaction</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
